@@ -1,7 +1,7 @@
 # Parking-Lot-Management-System
 
 ## DESCRIPTION:
-A responsive vehicle parking app that helps users find and reserve parking spots in real time. Designed to reduce
+A vehicle parking app that helps users find and reserve parking spots in real time. Designed to reduce
 parking stress and save time in busy areas. Features live spot availability, location-based search and offers a
 seamless parking experience.
 
