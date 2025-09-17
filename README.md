@@ -1,5 +1,7 @@
 # Parking-Lot-Management-System
 
+## Link to Deployed Website : [Click Here](https://parking-lot-management-system-gt2f.onrender.com/)
+
 ## DESCRIPTION:
 A vehicle parking app that helps users find and reserve parking spots in real time. Designed to reduce
 parking stress and save time in busy areas. Features live spot availability, location-based search and offers a
@@ -19,5 +21,3 @@ based on chosen parking lot, user cannot choose the spot), and release the occup
 - A summary and reservation history is maintained per user.
 - Admin features include adding, editing and deleting unoccupied parking lots, viewing spot status in a
 visual grid, access to list of registered users, and summary reports on revenue.
-
-## Link to Deployed Website : [Click Here](https://parking-lot-management-system-gt2f.onrender.com/)
