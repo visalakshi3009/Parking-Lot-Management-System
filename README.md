@@ -19,3 +19,6 @@ based on chosen parking lot, user cannot choose the spot), and release the occup
 - A summary and reservation history is maintained per user.
 - Admin features include adding, editing and deleting unoccupied parking lots, viewing spot status in a
 visual grid, access to list of registered users, and summary reports on revenue.
+
+## Link to Deployed Website
+[Click Here](https://parking-lot-management-system-gt2f.onrender.com/)
