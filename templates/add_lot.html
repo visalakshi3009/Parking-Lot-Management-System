@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "../static/css/styles.css">
+    <title> New Parking Lot </title>
+</head>
+<body>
+    <div class = "container d-flex flex-column justify-content-center align-items-center vh-100">
+        <div class = "bg-light p-5">
+            <div class = "text-center m-3">
+                <h3> New Parking Lot </h3>
+            </div>
+            <div class = "text-center error">
+                {% if error %}
+                    <p> {{error}} </p>
+                {% endif %}
+            </div>
+            <div class = "text-center success">
+                {% if success %}
+                    <p> Parking Lot added Successfully </p>
+                {% endif %}
+            </div>
+            <form action = "/addlot" method = "post">
+                <div class = "col-12">
+                    <div class = "form-floating d-block mx-auto">
+                        <input type = "text" class = "form-control my-3" name = "location" placeholder = "Prime Location Name" required>
+                        <label for = "location"> Prime Location Name: </label>
+                    </div>
+                    <div class = "form-floating d-block mx-auto">
+                        <textarea id = "address" class = "form-control my-3" name = "address" placeholder = "1, XXX" rows = "3" cols = "40" required></textarea>
+                        <label for = "address"> Address: </label>
+                    </div>
+                    <div class = "form-floating d-block mx-auto">
+                        <input type = "text" class = "form-control my-3" name = "pincode" placeholder = "000000" pattern = "[0-9]{6}" required>
+                        <label for = "pincode"> Pin Code: </label>
+                    </div>
+                    <div class = "form-floating d-block mx-auto">
+                        <input type = "number" class = "form-control my-3" name = "price" placeholder = "100" min = "1" step = "1" required>
+                        <label for = "price"> Price(per hour): </label>
+                    </div>
+                    <div class = "form-floating d-block mx-auto">
+                        <input type = "number" class = "form-control my-3" name = "maxspots" placeholder = "10" min = "1" step = "1" required>
+                        <label for = "maxspots"> Maximum spots: </label>
+                    </div>
+                    <div class = "d-flex justify-content-center align-items-center">
+                        <button type = "submit" class = "btn submit-btn m-4"> Add </button>
+                        <a class = "btn submit-btn m-4" href = "{{ url_for('admin_bp.admin_dashboard') }}"> Cancel </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

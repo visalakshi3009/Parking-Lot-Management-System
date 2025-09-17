@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "../static/css/styles.css">
+    <title> Parking Spot </title>
+</head>
+<body>
+    <div class = "d-flex justify-content-center align-items-center vh-100">
+        <div class = "text-center">
+            <div class = "error mb-3">
+                {% if error %}
+                    <p> {{ error }} </p>
+                {% endif %}
+            </div>
+            <div class="card p-4 shadow mx-auto text-center">
+                <div class = "mb-3">
+                    <p> Spot ID : {{ spot.spot_id }} </p>
+                    {% if spot.status == 'O' %}
+                        <p> Status : <a href = "{{ url_for('admin_bp.occupied', spot_id = spot.spot_id) }}" class = "btn btn-danger text-decoration-none"> {{ spot.status }} </a> </p>
+                    {% else %}
+                        <p> Status : <span class = "btn btn-success"> {{ spot.status }} </span> </p>
+                    {% endif %}
+                </div>
+                <div class = "d-flex justify-content-center align-items-center gap-3">
+                    <a href = "{{ url_for('admin_bp.deletespot', spot_id = spot.spot_id) }}" onclick = "return confirm('Are you sure you want to delete Parking Spot #{{ spot.spot_id }}?');" class = "me-3 text-decoration-none btn btn-danger px-4"> Delete </a>
+                    <a class = "btn submit-btn px-4" href = "{{ url_for('admin_bp.admin_dashboard') }}"> Close </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</body>
+</html>

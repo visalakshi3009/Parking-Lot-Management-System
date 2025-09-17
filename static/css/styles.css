@@ -1,0 +1,101 @@
+html{
+    font-size: 18px;
+}
+body{
+    background-color: #F9FAFB;
+    color: #111827;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.home{
+    background-image: url('../images/parking_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.error{
+    color: red;
+}
+.success{
+    color: green;
+}
+.submit-btn{
+    background-color: #1E3A8A;
+    color: white;
+    border-radius: 10%;
+}
+.submit-btn:hover{
+    background-color: #0EA5E9;
+}
+.custom-nav{
+    background-color: #1E3A8A;
+    
+}
+.custom-nav .navbar-brand, .custom-nav .nav-link{
+    font-size: 1.5rem;
+}
+.parking-lot{
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.parking-title{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+.parking-actions{
+    text-align: center;
+    margin-bottom: 8px;
+}
+.parking-actions a{
+    color: red;
+    font-weight: bold;
+    margin: 0 5px;
+    text-decoration: none;
+}
+.occupied-status{
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.spot-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 5px;
+    justify-content: center;
+    max-width: 220px;
+    margin: 0 auto;
+}
+.spot{
+    aspect-ratio: 1 / 1;
+    color: black;
+    border: 3px solid black;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spot.a{
+    background-color: lightgreen;
+}
+.spot.o{
+    background-color: coral;
+}
+.scroll-container{
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+thead th{
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa;
+}

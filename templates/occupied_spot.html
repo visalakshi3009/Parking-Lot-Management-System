@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "../static/css/styles.css">
+    <title> Occupied Spot Details </title>
+</head>
+<body>
+    <div class = "d-flex flex-column justify-content-center align-items-center vh-100">
+        <div class="card p-4 shadow w-50 mx-auto text-center">
+            <p> Reservation ID : {{ user.res_id }} </p>
+            <p> Customer ID : {{ user.user_id }} </p>
+            <p> Vehicle Number : {{ user.vehicle_no }} </p>
+            <p> Parking Timestamp : {{ user.parking_timestamp }} </p>
+            <p> Parking Cost : {{ user.price }} </p>
+        </div>
+        <div>
+            <a class = "btn submit-btn m-4" href = "{{ url_for('admin_bp.admin_dashboard') }}"> Close </a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
